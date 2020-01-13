@@ -3,7 +3,7 @@
 //Professor Lydia
 //01/13/2020
 //This is topic 1 assignment called Lucky 7
-//Here's 6 programs that meets the instruction
+//Here's 7 programs that meets the instruction
 
 #include <iostream>
 using namespace std;
