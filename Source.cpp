@@ -1,15 +1,28 @@
-//Kyungchan Im
-//CST - 210
-//Professor Lydia
-//01/13/2020
-//This is topic 1 assignment called Lucky 7
-//Here's 7 programs that meets the instruction
+/*
+Kyungchan Im
+CST - 210
+Professor Lydia
+01/13/2020
 
+	Topic 1 : Lucky 7
+	Here's 7 programs that meets the instruction
+	Write the following seven programs Ask your instructor for any details about how he or she would like you to organize your code.
+
+	1. Write a program that reads in 5 integers and prints the largest and the smallest of the group.
+	2. Write a program that calculates and prints the sum of the first 50 positive integers that are multiples of 7.
+	3. Write a program that calculates and prints the first 10 terms of the factorial sequence.
+	4. Write a program that reads in a string and determines whether it is a palindrome.
+	5. Write a program that reads in a positive integer and determines whether it is a prime number.
+	6. Write a program that creates an array of integers using an initialization list and calculates and displays the average of the values.
+	7. Write a program that gets a positive integer n from the user and creates an array of n. 
+		The program should read strings from a file, fill the array with the first n strings, and print the string with the most characters. 
+		You may assume that number of strings in the file is greater than
+
+*/
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <cctype>
-//#include <iomanip>
 using namespace std;
 
 int main() {
@@ -19,6 +32,8 @@ int main() {
 	cout << "--------------------------------" << endl;
 	cout << "|         Program No.1         |" << endl;
 	cout << "--------------------------------" << endl;
+	
+	//Asking input value for 5 integers
 	int a, b, c, d, e;
 	cout << "Type your five integers to distinguish the minimum and the maximum value: ";
 	cin >> a >> b >> c >> d >> e;
@@ -67,6 +82,7 @@ int main() {
 	cout << "\n--------------------------------" << endl;
 	cout << "|         Program No.2         |" << endl;
 	cout << "--------------------------------" << endl;
+	//Printing sum of the first 50 positive integers
 	int count = 0;
 	int sumOfSevens = 0;
 	for (int i = 1; i < 500; i++) {
@@ -91,6 +107,8 @@ int main() {
 	int i, factorial = 1, number;
 	cout << "Enter any Number to find the factorial sequence: ";
 	cin >> number;
+
+	//Calculation of factorial number
 	for (i = 1; i <= number; i++) {
 		factorial = factorial * i;
 	}
@@ -104,12 +122,14 @@ int main() {
 	cout << "\n--------------------------------" << endl;
 	cout << "|         Program No.4         |" << endl;
 	cout << "--------------------------------" << endl;
+
+	//Ask string for checking palindrome
 	string userString = "";
 	cout << "Type a word to check it is a palindrome: ";
 	cin >> userString;
 	int initialString = 0, finalString = userString.size() - 1;
 
-	//Check spaces and lowercases. #include <cctype>
+	//Check lowercases. #include <cctype> and palindrome.
 	while (initialString < finalString) {
 		if (tolower(userString[initialString]) != tolower(userString[finalString])) {
 			cout << "This is not a palindrome." << endl;
@@ -132,10 +152,14 @@ int main() {
 	cout << "\n--------------------------------" << endl;
 	cout << "|         Program No.5         |" << endl;
 	cout << "--------------------------------" << endl;
+
+	//Initialization
 	int primeInt = 0;
 	bool isPrime = true;
 	cout << "Enter a positive integer: ";
 	cin >> primeInt;
+
+	//Return false if user_input is not a prime number.
 	for (int i = 2; i <= primeInt / 2; ++i)
 	{
 		if (primeInt % i == 0)
@@ -144,6 +168,7 @@ int main() {
 			break;
 		}
 	}
+	//If the number is prime, return a comment, else return comment.
 	if (isPrime)
 		cout << "This is a prime number" << endl;
 	else
@@ -159,6 +184,7 @@ int main() {
 	int numItems = sizeof(arr) / sizeof(int);
 
 	int sum = 0;
+	//Calculating the sum of the array.
 	int numI = 0;
 	while (numI < numItems) {
 		sum = sum + arr[numI];
@@ -167,6 +193,7 @@ int main() {
 	cout << "\n--------------------------------" << endl;
 	cout << "|         Program No.6         |" << endl;
 	cout << "--------------------------------" << endl;
+	//Printing the initialization list.
 	cout << "Initialization list = { ";
 	for (int i = 0; i < 10; i++)
 	{
@@ -214,9 +241,9 @@ int main() {
 
 	//print the contents of the array
 	//we have to use loop
+	
+	
 	//1. Find the largest charater.
-	//2. Print the largest character with that position.
-
 	int largestString = 0;
 	int numContainer = 0;
 	cout << "The length of each string is: ";
@@ -229,6 +256,7 @@ int main() {
 
 	}
 
+	//2. Print the largest character with that position.
 	for (int i = 0; i < numStrings; i++)
 	{
 		if (strArr[i].size() == largestString) {
